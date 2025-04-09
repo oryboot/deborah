@@ -1,7 +1,5 @@
-// French love quotes array
 const loveQuotes = ["Envois tes pieds stp"];
 
-// Function to change quotes
 function changeQuote() {
     const quoteElement = document.getElementById('love-quote');
     const randomQuote = loveQuotes[Math.floor(Math.random() * loveQuotes.length)];
@@ -14,9 +12,8 @@ function changeQuote() {
 document.querySelector('.quote-box').addEventListener('click', changeQuote);
 
 
-// Function to generate a random size
 function getRandomSize() {
-    return Math.random() * (60 - 15) + 15 + 'px'; // Random size between 15px and 30px
+    return Math.random() * (60 - 15) + 15 + 'px'; 
 }
 
 // Create floating hearts
@@ -25,44 +22,43 @@ function createFloatingHeart() {
     heart.className = 'floating-heart';
     heart.innerHTML = '❤️';
     heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.opacity = 0.7; // Set opacity for hearts
-    heart.style.fontSize = getRandomSize(); // Set random size for hearts
+    heart.style.opacity = 0.7; 
+    heart.style.fontSize = getRandomSize(); 
     document.querySelector('.floating-hearts').appendChild(heart);
 
-    // Remove heart after animation
     heart.addEventListener('animationend', () => {
         heart.remove();
     });
 }
 
-// Create floating roses
+
 function createFloatingRoses() {
-    const roses = document.createElement('div'); // Corrected from 'div1' to 'div'
+    const roses = document.createElement('div'); 
     roses.className = 'floating-roses';
     roses.innerHTML = '🌹';
     roses.style.left = Math.random() * 100 + 'vw';
-    roses.style.opacity = 0.7; // Set opacity for roses
-    roses.style.fontSize = getRandomSize(); // Set random size for roses
-    document.querySelector('.floating-hearts').appendChild(roses); // Append to the same container
+    roses.style.opacity = 0.7;
+    roses.style.fontSize = getRandomSize();
+    document.querySelector('.floating-hearts').appendChild(roses);
 
-    // Remove rose after animation
+
     roses.addEventListener('animationend', () => {
         roses.remove();
     });
 }
 
-// Create new floating rose every 2 seconds
-setInterval(createFloatingRoses, 3000); // Add interval for roses
 
-// Create new floating rose every 2 seconds
-setInterval(createFloatingHeart, 5000); // Add interval for roses
+setInterval(createFloatingRoses, 3000); 
 
-// Add click event to gallery
+
+setInterval(createFloatingHeart, 5000); 
+
+
 document.querySelector('.gallery').addEventListener('click', () => {
     alert('This is where you can add your favorite photos together! 📸');
 });
 
-// Add hover effects
+
 document.querySelectorAll('.message-box, .gallery, .quote-box').forEach(element => {
     element.addEventListener('mouseenter', () => {
         element.style.transform = 'scale(1.02)';
@@ -73,13 +69,12 @@ document.querySelectorAll('.message-box, .gallery, .quote-box').forEach(element 
     });
 });
 
-// Start animations when page loads
 document.addEventListener('DOMContentLoaded', () => {
-    changeQuote(); // Initial quote change
-    createFloatingHeart(); // Initial heart creation
+    changeQuote();
+    createFloatingHeart(); 
 });
 
-// Add sparkle effect on click
+
 document.addEventListener('click', (e) => {
     const sparkle = document.createElement('div');
     sparkle.className = 'sparkle';
