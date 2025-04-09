@@ -1,0 +1,178 @@
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #ffd3d3;
+    --text-color: #4a4a4a;
+    --background: #fff5f5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background);
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 450px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.heart-container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    position: relative;
+    transform: rotate(45deg);
+    animation: heartbeat 1.2s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart:before {
+    left: -25px;
+}
+
+.heart:after {
+    left:0;
+    top: -25px;
+}
+
+@keyframes heartbeat {
+    0% { transform: rotate(45deg) scale(1); }
+    25% { transform: rotate(45deg) scale(1.1); }
+    50% { transform: rotate(45deg) scale(1); }
+    75% { transform: rotate(45deg) scale(1.2); }
+    100% { transform: rotate(45deg) scale(1); }
+}
+
+.title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.message-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.message-box:hover {
+    transform: scale(1.02);
+}
+
+.love-message {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.gallery {
+    position: relative;
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery:hover {
+    transform: scale(1.02);
+}
+
+.photo-frame {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.quote-box {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 45px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.quote-box:hover {
+    transform: scale(1.02);
+}
+
+#love-quote {
+    color: var(--text-color);
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.floating-heart {
+    position: absolute;
+    color: var(--primary-color);
+    font-size: 20px;
+    animation: float-up 4s linear infinite;
+}
+
+.note {
+    font-size: small;
+    font-style: italic;
+    opacity: 0.4;
+    color: #4a4a4a;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.floating-roses {
+    position: absolute;
+    color: var(--primary-color); /* Use the same color as hearts */
+    font-size: 20px;
+    animation: float-up 4s linear infinite; /* Use the same animation */
+}
