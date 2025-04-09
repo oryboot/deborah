@@ -16,7 +16,7 @@ function getRandomSize() {
     return Math.random() * (60 - 15) + 15 + 'px'; 
 }
 
-// Create floating hearts
+
 function createFloatingHeart() {
     const heart = document.createElement('div');
     heart.className = 'floating-heart';
