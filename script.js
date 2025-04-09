@@ -48,10 +48,10 @@ function createFloatingRoses() {
 }
 
 
-setInterval(createFloatingRoses, 3000); 
+setInterval(createFloatingRoses, 10000); 
 
 
-setInterval(createFloatingHeart, 5000); 
+setInterval(createFloatingHeart, 11000); 
 
 
 document.querySelector('.gallery').addEventListener('click', () => {
