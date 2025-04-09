@@ -16,11 +16,7 @@ body {
     align-items: center;
 }
 
-.container {
-    max-width: 450px;
-    padding: 2rem;
-    text-align: center;
-}
+
 
 .heart-container {
     height: 150px;
@@ -73,24 +69,6 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
-.message-box {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.message-box:hover {
-    transform: scale(1.02);
-}
-
-.love-message {
-    color: var(--text-color);
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
 
 .gallery {
     position: relative;
@@ -172,7 +150,7 @@ body {
 
 .floating-roses {
     position: absolute;
-    color: var(--primary-color); /* Use the same color as hearts */
+    color: var(--primary-color); 
     font-size: 20px;
-    animation: float-up 4s linear infinite; /* Use the same animation */
+    animation: float-up 4s linear infinite; 
 }
