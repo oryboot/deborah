@@ -5,6 +5,14 @@
     --background: #fff5f5;
 }
 
+
+.container {
+    max-width: 450px;
+    padding: 2rem;
+    text-align: center;
+}
+
+
 body {
     margin: 0;
     padding: 0;
